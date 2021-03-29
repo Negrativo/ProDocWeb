@@ -65,7 +65,7 @@ CREATE TABLE public.swphase (
 	"order" integer NOT NULL UNIQUE
 	);
 
-CREATE TABLE public.swactivflow (
+CREATE TABLE  public.swactivflow (
         swactivity integer NOT NULL,
         nextactivity integer NOT NULL,
         CONSTRAINT swactivflow_pk PRIMARY KEY (swactivity , nextactivity )
@@ -86,3 +86,30 @@ CREATE TABLE public.swimages (
 	description character varying(200) NOT NULL,
 	CONSTRAINT swimages_pk PRIMARY KEY (id)
 );
+
+CREATE SEQUENCE seq_swuser start with 1 increment by 1 nocache;
+/
+
+CREATE SEQUENCE seq_sworganization start with 1 increment by 1 nocache;
+/
+
+CREATE SEQUENCE seq_swprocess start with 1 increment by 1 nocache;
+/
+
+CREATE SEQUENCE seq_swactivity start with 1 increment by 1 nocache;
+/
+
+CREATE SEQUENCE seq_swguidance start with 1 increment by 1 nocache;
+/
+
+CREATE SEQUENCE seq_swphase start with 1 increment by 1 nocache;
+/
+
+CREATE SEQUENCE seq_swactivflow start with 1 increment by 1 nocache;
+/
+
+CREATE SEQUENCE seq_swgateway start with 1 increment by 1 nocache;
+/
+
+CREATE SEQUENCE seq_swimages start with 1 increment by 1 nocache;
+/
